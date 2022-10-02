@@ -84,23 +84,23 @@ local myawesomemenu = {
 }
 
 local myexitmenu = {
-    { "log out", function() awesome.quit() end, "/usr/share/icons/Win11-blue-dark/actions/24/system-log-out.svg" },
-    { "suspend", "suspend", "/usr/share/icons/Win11-blue-dark/actions/24/gnome-session-suspend.svg" },
-    { "hibernate", "hibernate", "/usr/share/icons/Win11-blue-dark/actions/24/gnome-session-hibernate.svg" },
-    { "reboot", "reboot", "/usr/share/icons/Win11-blue-dark/actions/24/view-refresh.svg" },
-    { "shutdown", "poweroff", "/usr/share/icons/Win11-blue-dark/actions/24/system-shutdown.svg" }
+    { "log out", function() awesome.quit() end, "/usr/share/icons/Papirus/24x24/actions/system-log-out.svg" },
+    { "suspend", "suspend", "/usr/share/icons/Papirus/24x24/actions/gnome-session-suspend.svg" },
+    { "hibernate", "hibernate", "/usr/share/icons/Papirus/24x24/actions/gnome-session-hibernate.svg" },
+    { "reboot", "reboot", "/usr/share/icons/Papirus/24x24/actions/view-refresh.svg" },
+    { "shutdown", "poweroff", "/usr/share/icons/Papirus/24x24/actions/system-shutdown.svg" }
 }
 
 local mymainmenu = freedesktop.menu.build({
     before = {
-        { "Terminal", terminal, "/usr/share/icons/Win11-blue/apps/scalable/utilities-terminal.svg" },
-        { "Files", filemanager, "/usr/share/icons/Win11-blue/apps/scalable/system-file-manager.svg" },
-        { "Brave", browser, "/usr/share/icons/hicolor/128x128/apps/brave-bin.png" },
+        { "Terminal", terminal, "/usr/share/icons/Papirus/64x64/apps/utilities-terminal.svg" },
+        { "Files", filemanager, "/usr/share/icons/Papirus/64x64/apps/system-file-manager.svg" },
+        { "Brave", browser, "/usr/share/icons/Papirus/64x64/apps/brave.svg" },
         -- other triads can be put here
     },
     after = {
         { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome16.png" },
-        { "Exit", myexitmenu, "/usr/share/icons/Win11-blue-dark/actions/24@2x/system-restart.svg" },
+        { "Exit", myexitmenu, "/usr/share/icons/Papirus/24x24/actions/system-restart.svg" },
         -- other triads can be put here
     }
 })
