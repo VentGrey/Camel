@@ -33,6 +33,8 @@ This configuration includes:
 
 Built on top of the Default AwesomeWM Theme.
 
+- :warning: The included `freedesktop` library is made by LCPZ. Here is the [original repository](https://github.com/lcpz/awesome-freedesktop). It's GPL-2.0 License.
+
 And some inspiration / patches taken from these wonderful sources:
 
 - Reading code :eyes:
