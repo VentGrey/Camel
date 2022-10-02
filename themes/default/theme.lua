@@ -93,8 +93,8 @@ theme.notification_opacity = 2
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = "~/.config/awesome/themes/default/submenu.png"
-theme.menu_height = dpi(40)
-theme.menu_width  = dpi(350)
+theme.menu_height = dpi(20)
+theme.menu_width  = dpi(125)
 
 -- You can add as many variables as
 -- you wish and access them by using
