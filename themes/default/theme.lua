@@ -7,7 +7,6 @@ local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
-local themes_path = gfs.get_themes_dir()
 local gears = require("gears")
 
 local theme = {}
@@ -88,6 +87,7 @@ theme.notification_margin = dpi(20)
 theme.notification_shape = gears.shape.rounded_rect
 theme.notification_icon_size = 50
 theme.notification_opacity = 2
+theme.notification_border_color = "#FBFBFB"
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
