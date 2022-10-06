@@ -6,9 +6,9 @@
 
 Small theme for AwesomeWM. Camel is being developed as a starting point
 for Gnu/Linux :penguin: users who are transitioning from a complete Desktop Environment to a complete Window Manager, this theme does not
-aim to be "simple" or "minimalistic", it aims to be complete, **heavily opinionated** and user* friendly while keeping modularity at first.
+aim to be "simple" or "minimalistic", it aims to be complete, **heavily opinionated** and user* friendly.
 
-- *where user means "Me"
+- *where "user" means "Me"
 
 > For credits and copyright notices see the bottom of this file.
 
