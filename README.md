@@ -22,7 +22,8 @@ WIP :warning:
 
 ## Screenshots
 
-WIP :warning:
+![image](https://user-images.githubusercontent.com/24773698/194235577-ffc98b78-e607-4fb6-9f17-a3adba6c916b.png)
+
 
 ## Overview
 
@@ -41,7 +42,7 @@ And some inspiration / patches taken from these wonderful sources:
 
 ## Wallpaper artists credit
 
-- I have no idea who made the wallpaper but I'll attribute them if it has a libre license. If not, I'll make a wallpaper myself.
+- Yo mero using Canva xD
 
 ## Other Copyright Notices
 
