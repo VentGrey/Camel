@@ -32,5 +32,5 @@ run mate-screensaver
 run /usr/bin/gnome-keyring-daemon --start --components=secrets
 run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
-run mate-volume-control-status-icon
+run volumeicon
 run picom
