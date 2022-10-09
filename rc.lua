@@ -53,9 +53,7 @@ beautiful.border_width = 1
 beautiful.awesome_icon = string.format("%s/.config/awesome/icons/start-here.svg", os.getenv("HOME"))
 
 -- This is used later as the default terminal and editor to run.
-local terminal = os.getenv("TERMINAL") or "mate-terminal" or "kitty"
-local editor = os.getenv("EDITOR") or "nano"
-local editor_cmd = terminal .. " -e " .. editor
+local terminal = os.getenv("TERMINAL") or "kitty"
 local gui_editor = "pluma"
 local browser = "brave-bin"
 local filemanager = "caja"
