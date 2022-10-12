@@ -37,7 +37,7 @@ Be aware that this will rewrite your current "default" theme.
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/24773698/194235577-ffc98b78-e607-4fb6-9f17-a3adba6c916b.png)
+![image](https://user-images.githubusercontent.com/24773698/195279541-49d15cca-bb9a-4d1b-ba7c-8a1e27f4c0a9.png)
 
 
 ## Overview
