@@ -34,3 +34,4 @@ run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
 run volumeicon
 run picom
+run xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
