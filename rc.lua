@@ -567,6 +567,15 @@ client.connect_signal("manage", function (c)
     end
 end)
 
+-- Fix electron app icons
+client.connect_signal("manage", function (c)
+    if c.class == ("Spotify" or "spotify") then
+        local icon = gears.surface("/usr/share/icons/hicolor/128x128/apps/spotify-client.png")
+        c.icon = icon._native
+        icon:finish()
+    end
+end)
+
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
     -- buttons for the titlebar
