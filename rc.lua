@@ -15,8 +15,6 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local freedesktop = require("freedesktop")
--- Custom dashboard widget
-local dashboard_widget = require("widgets.dashboard")
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -255,7 +253,6 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            dashboard_widget,
             wibox.widget.systray(),
             mytextclock,
             wibox.layout.margin(s.mylayoutbox, 5,5,5,5),
