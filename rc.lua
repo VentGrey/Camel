@@ -83,10 +83,10 @@ local myawesomemenu = {
 
 local myexitmenu = {
     { "log out", function() awesome.quit() end, "/usr/share/icons/Papirus/24x24/actions/system-log-out.svg" },
-    { "suspend", "suspend", "/usr/share/icons/Papirus/24x24/actions/gnome-session-suspend.svg" },
-    { "hibernate", "hibernate", "/usr/share/icons/Papirus/24x24/actions/gnome-session-hibernate.svg" },
-    { "reboot", "reboot", "/usr/share/icons/Papirus/24x24/actions/view-refresh.svg" },
-    { "shutdown", "poweroff", "/usr/share/icons/Papirus/24x24/actions/system-shutdown.svg" }
+    { "suspend", "loginctl suspend", "/usr/share/icons/Papirus/24x24/actions/gnome-session-suspend.svg" },
+    { "hibernate", "loginctl hibernate", "/usr/share/icons/Papirus/24x24/actions/gnome-session-hibernate.svg" },
+    { "reboot", "loginctl reboot", "/usr/share/icons/Papirus/24x24/actions/view-refresh.svg" },
+    { "shutdown", "loginctl shutdown", "/usr/share/icons/Papirus/24x24/actions/system-shutdown.svg" }
 }
 
 local mymainmenu = freedesktop.menu.build({
