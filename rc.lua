@@ -82,7 +82,7 @@ local myawesomemenu = {
 }
 
 local myexitmenu = {
-    { "log out", function() awesome.quit() end, "/usr/share/icons/Papirus-Dark/24x24/apps/system-log-out.svg" },
+    { "log out", function() awesome.quit() end, "/usr/share/icons/Papirus/24x24/apps/system-log-out.svg" },
     { "suspend", "loginctl suspend", "/usr/share/icons/Papirus/24x24/apps/gnome-session-suspend.svg" },
     { "hibernate", "loginctl hibernate", "/usr/share/icons/Papirus/24x24/apps/gnome-session-hibernate.svg" },
     { "reboot", "loginctl reboot", "/usr/share/icons/Papirus/24x24/apps/system-reboot.svg" },
@@ -98,13 +98,10 @@ local mymainmenu = freedesktop.menu.build({
     },
     after = {
         { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome16.png" },
-        { "Exit", myexitmenu, "/usr/share/icons/Papirus/24x24/actions/system-restart.svg" },
+        { "Exit", myexitmenu, "/usr/share/icons/Papirus-Dark/24x24/actions/exit.svg" },
         -- other triads can be put here
     }
 })
-
-local mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -236,12 +233,6 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
-            wibox.widget.separator({
-                orientation = "vertical",
-                thickness = 0,
-                forced_width = 15,
-            }),
             s.mytaglist,
             s.mypromptbox,
             wibox.widget.separator({
