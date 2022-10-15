@@ -21,7 +21,7 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
     mate-power-manager &
 fi
 
-
+run dbus-update-activation-environment --all
 run mate-power-manager
 run start-pulseaudio-x11
 run /usr/bin/gnome-keyring-daemon --start --components=ssh
