@@ -8,9 +8,6 @@ run() {
 }
 
 ## run (only once) processes which spawn with different name
-if (command -v gnome-keyring-daemon && ! pgrep gnome-keyring-d); then
-    gnome-keyring-daemon --daemonize --login &
-fi
 if (command -v start-pulseaudio-x11 && ! pgrep pulseaudio); then
     start-pulseaudio-x11 &
 fi
