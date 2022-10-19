@@ -18,8 +18,8 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
     mate-power-manager &
 fi
 
-run dbus-update-activation-environment --all
-run /usr/bin/gnome-keyring-daemon --start --components=secrets
+dbus-update-activation-environment --all
+/usr/bin/gnome-keyring-daemon --start --components=secrets
 run start-pulseaudio-x11
 run /usr/libexec/mate-settings-daemon
 run nm-applet
