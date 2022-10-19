@@ -19,12 +19,11 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
 fi
 
 run dbus-update-activation-environment --all
+run /usr/bin/gnome-keyring-daemon --start --components=secrets
 run start-pulseaudio-x11
-run /usr/bin/gnome-keyring-daemon --start --components=ssh
 run /usr/libexec/mate-settings-daemon
 run nm-applet
 run mate-screensaver
-run /usr/bin/gnome-keyring-daemon --start --components=secrets
 run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
 run volumeicon
