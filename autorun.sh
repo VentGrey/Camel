@@ -27,5 +27,5 @@ run mate-screensaver
 run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
 run volumeicon
-run picom
+run picom --experimental-backends
 run xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
