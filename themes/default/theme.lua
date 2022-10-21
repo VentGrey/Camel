@@ -6,7 +6,6 @@ local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
-local gfs = require("gears.filesystem")
 local gears = require("gears")
 
 local theme = {}
@@ -26,8 +25,8 @@ theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
+theme.border_normal = "#0F0F0F"
+theme.border_focus  = "#010101"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets

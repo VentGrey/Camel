@@ -50,7 +50,6 @@ end
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "default")
 beautiful.init(theme_path)
 beautiful.border_width = 1
-beautiful.awesome_icon = string.format("%s/.config/awesome/icons/start-here.svg", os.getenv("HOME"))
 
 -- This is used later as the default terminal and editor to run.
 local terminal = os.getenv("TERMINAL") or "kitty"
@@ -554,7 +553,7 @@ end)
 -- Make rounded borders
 client.connect_signal("manage", function (c)
     c.shape = function (cr, w, h)
-        gears.shape.rounded_rect(cr, w, h, 9)
+        gears.shape.rounded_rect(cr, w, h, 10)
     end
 end)
 
