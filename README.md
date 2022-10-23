@@ -20,7 +20,8 @@ Built on top of the Default AwesomeWM Theme.
 
 - :warning: The included `freedesktop` library is made by LCPZ. Here is the [original repository](https://github.com/lcpz/awesome-freedesktop). It's GPL-2.0 License.
 
-- :warning: The included `media_player` and `dbus_proxy` libraries are made by [stefamo-m](https://github.com/stefano-m) both under the Apache-2.0 License.
+- :warning: The included `mpris_widget` widget is a modified version, originally made
+by [streetturtle](https://github.com/streetturtle)
 
 And some inspiration / patches taken from these wonderful sources:
 

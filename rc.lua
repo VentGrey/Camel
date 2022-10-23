@@ -14,7 +14,9 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+-- Widgets & Extras
 local freedesktop = require("freedesktop")
+local mpris_widget = require("mpris_widget")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys.vim")
@@ -243,6 +245,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            mpris_widget(),
             wibox.widget.systray(),
             mytextclock,
             wibox.container.margin(s.mylayoutbox, 5,5,5,5),
