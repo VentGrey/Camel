@@ -18,9 +18,15 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
     mate-power-manager &
 fi
 
+# Try Starting a dbus session
+. /etc/X11/xinit/xinitrc.d/80-dbus
+
 run dbus-update-activation-environment --all
-run /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
+export GNOME_KEYRING_CONTROL
+export GNOME_KEYRING_PID
 run start-pulseaudio-x11
 run /usr/libexec/mate-settings-daemon
 run nm-applet
@@ -30,3 +36,5 @@ run xdg-user-dirs-gtk-update
 run volumeicon
 run picom --experimental-backends
 run xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
+
+export XDG_CURRENT_DESKTOP=GNOME
