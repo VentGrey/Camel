@@ -43,10 +43,20 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- TAGLIST COLOURS + ICON SPACING
-theme.taglist_bg_focus = "#8AADF4"
-theme.taglist_bg_urgent = "#ED8796"
-theme.taglist_bg_occupied = "#A6DA95"
-theme.taglist_fg_occupied  = "#1d1d1d"
+theme.taglist_fg_focus = "#8AADF4"
+theme.taglist_fg_urgent = "#ED8796"
+theme.taglist_bg_urgent = theme.bg_normal
+theme.taglist_fg_occupied = "#A6DA95"
+
+
+-- Generate taglist squares:
+local taglist_square_size = dpi(4)
+theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
+    taglist_square_size, theme.fg_normal
+)
+theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
+    taglist_square_size, theme.fg_normal
+)
 
 -- TASKLIST STYLES
 theme.tasklist_bg_focus = "#C6A0F6"
@@ -62,17 +72,6 @@ theme.titlebar_fg_focus = "#CDD6F4"
 
 -- WIBAR STYLES
 theme.wibar_shape = gears.shape.rounded_rect
-
--- SYSTRAY STYLES
-
--- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
 
 -- Variables set for theming notifications:
 -- notification_font
