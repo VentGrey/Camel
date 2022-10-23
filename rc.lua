@@ -15,7 +15,6 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local freedesktop = require("freedesktop")
-
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys.vim")
@@ -164,6 +163,7 @@ local function set_wallpaper(s)
         gears.wallpaper.maximized(wallpaper, s, true)
     end
 end
+
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
