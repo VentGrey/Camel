@@ -14,6 +14,18 @@ Small theme for AwesomeWM, **heavily opinionated** and user* friendly.
 
 - Fix spotify icon not appearing in Awesome tasklist.
 
+## Credit / Sources
+
+Built on top of the Default AwesomeWM Theme.
+
+- :warning: The included `freedesktop` library is made by LCPZ. Here is the [original repository](https://github.com/lcpz/awesome-freedesktop). It's GPL-2.0 License.
+
+- :warning: The included `media_player` and `dbus_proxy` libraries are made by [stefamo-m](https://github.com/stefano-m) both under the Apache-2.0 License.
+
+And some inspiration / patches taken from these wonderful sources:
+
+- [streetturtle](https://github.com/streetturtle)
+
 ## Installation
 
 If for some reason you like this instead of [Epitaph](https://github.com/VentGrey/Epitaph) which is more complete. You can install this theme by cloning the repository into your `~/.config` directory.
@@ -45,15 +57,6 @@ Be aware that this will rewrite your current "default" theme.
 This configuration includes:
 - A basic almost "copy-paste" AwesomeWM configuration directory.
 
-## Credit / Sources
-
-Built on top of the Default AwesomeWM Theme.
-
-- :warning: The included `freedesktop` library is made by LCPZ. Here is the [original repository](https://github.com/lcpz/awesome-freedesktop). It's GPL-2.0 License.
-
-And some inspiration / patches taken from these wonderful sources:
-
-- [streetturtle](https://github.com/streetturtle)
 
 ## Wallpaper artists credit
 
