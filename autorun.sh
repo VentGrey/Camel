@@ -37,4 +37,5 @@ run volumeicon
 run picom --experimental-backends
 run xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
 
+eval $(dbus-launch --sh-syntax)
 export XDG_CURRENT_DESKTOP=GNOME
