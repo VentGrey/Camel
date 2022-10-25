@@ -81,14 +81,6 @@ local myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
-local myexitmenu = {
-    { "log out", function() awesome.quit() end, "/usr/share/icons/Papirus/24x24/apps/system-log-out.svg" },
-    { "suspend", "loginctl suspend", "/usr/share/icons/Papirus/24x24/apps/gnome-session-suspend.svg" },
-    { "hibernate", "loginctl hibernate", "/usr/share/icons/Papirus/24x24/apps/gnome-session-hibernate.svg" },
-    { "reboot", "loginctl reboot", "/usr/share/icons/Papirus/24x24/apps/system-reboot.svg" },
-    { "shutdown", "loginctl shutdown", "/usr/share/icons/Papirus/24x24/apps/system-shutdown.svg" }
-}
-
 local mymainmenu = freedesktop.menu.build({
     before = {
         { "Terminal", terminal, "/usr/share/icons/Papirus/64x64/apps/utilities-terminal.svg" },
@@ -98,7 +90,6 @@ local mymainmenu = freedesktop.menu.build({
     },
     after = {
         { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome16.png" },
-        { "Exit", myexitmenu, "/usr/share/icons/Papirus-Dark/24x24/actions/exit.svg" },
         -- other triads can be put here
     }
 })
@@ -235,7 +226,6 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
-            s.mypromptbox,
             wibox.widget.separator({
                 orientation = "vertical",
                 forced_width = 30,
@@ -266,20 +256,16 @@ root.buttons(gears.table.join(
 local globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    awful.key({ modkey,           }, "j",
+    awful.key({ modkey,           }, "Right",
         function ()
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "k",
+    awful.key({ modkey,           }, "Left",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -328,7 +314,7 @@ local globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey,           }, "p", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
