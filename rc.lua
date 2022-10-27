@@ -17,7 +17,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Widgets & Extras
 local freedesktop = require("freedesktop")
 local mpris_widget = require("mpris_widget")
-local battery_widget = require("battery_widget")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys.vim")
