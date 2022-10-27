@@ -22,7 +22,7 @@ local PATH_TO_ICONS = "/usr/share/icons/Papirus-Dark"
 local PAUSE_ICON_NAME = PATH_TO_ICONS .. "/24x24/actions/player_pause.svg"
 local PLAY_ICON_NAME = PATH_TO_ICONS .. "/24x24/actions/player_play.svg"
 local STOP_ICON_NAME = PATH_TO_ICONS .. "/24x24/actions/player_stop.svg"
-local LIBRARY_ICON_NAME = PATH_TO_ICONS .. "/24x24/actions/music-library.svg"
+local LIBRARY_ICON_NAME = PATH_TO_ICONS .. "/24x24/places/library-music.svg"
 
 local default_player = ''
 
