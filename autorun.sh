@@ -19,11 +19,7 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
 fi
 
 run dbus-update-activation-environment --all
-run /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
-export SSH_AUTH_SOCK
-export GPG_AGENT_INFO
-export GNOME_KEYRING_CONTROL
-export GNOME_KEYRING_PID
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh | sed 's/^(.*)/export \1/g')
 run start-pulseaudio-x11
 run /usr/libexec/mate-settings-daemon
 run nm-applet
