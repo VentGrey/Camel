@@ -23,6 +23,8 @@ Built on top of the Default AwesomeWM Theme.
 - :warning: The included `mpris_widget` widget is a modified version, originally made
 by [streetturtle](https://github.com/streetturtle)
 
+- :warning: The included `battery-widget` is a modified version originally made by [berlam](https://github.com/berlam/awesome-upower-battery). Under the ISC License.
+
 And some inspiration / patches taken from these wonderful sources:
 
 - [streetturtle](https://github.com/streetturtle)
@@ -33,6 +35,10 @@ If for some reason you like this instead of [Epitaph](https://github.com/VentGre
 Be aware that this will rewrite your current "default" theme.
 
 ### Requirements
+
+## OS Specific
+- Upower for `battery-widget`
+- dbus :nausea:
 
 ### rc.lua specific
 - Brave Browser for "browser"
