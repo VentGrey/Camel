@@ -99,6 +99,14 @@ theme.menu_width  = dpi(125)
 -- beautiful.variable in your rc.lua
 --theme.bg_widget = "#cc0000"
 
+-- Theme icons
+theme.ac = "~/.config/awesome/themes/default/icons/ac.svg"
+theme.bat = "~/.config/awesome/themes/default/icons/battery-full.svg"
+theme.bat_charge = "~/.config/awesome/themes/default/icons/battery-charging.svg"
+theme.bat_empty = "~/.config/awesome/themes/default/icons/battery-empty.svg"
+theme.bat_full = "~/.config/awesome/themes/default/icons/battery-full.svg"
+theme.bat_half = "~/.config/awesome/themes/default/icons/battery-half.svg"
+
 -- Define the image to load
 theme.titlebar_close_button_normal = "~/.config/awesome/themes/default/titlebar/close_normal.png"
 theme.titlebar_close_button_focus  = "~/.config/awesome/themes/default/titlebar/close_focus.png"

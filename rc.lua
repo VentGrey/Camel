@@ -17,6 +17,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Widgets & Extras
 local freedesktop = require("freedesktop")
 local mpris_widget = require("mpris_widget")
+local batwidget = require("battery-widget")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys.vim")
@@ -105,6 +106,36 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibar
 -- Create a textclock widget
 local mytextclock = wibox.widget.textclock()
+
+-- Wibar separator
+local separator = wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 10,
+                thickness = 0,
+            })
+
+-- Create a battery widget
+local baticon = wibox.widget.imagebox(beautiful.bat)
+local bat = batwidget({
+    settings = function ()
+        if bat_now.status == "Discharging" then
+            if bat_now.perc <= 15 then
+                baticon:set_image(beautiful.bat_empty)
+            elseif bat_now.perc >= 16 then
+                baticon:set_image(beautiful.bat_half)
+            elseif bat_now.perc == 100 then
+                baticon:set_image(beautiful.bat_charge)
+            else
+                baticon:set_image(beautiful.bat_full)
+            end
+            widget:set_markup(string.format("%3d", math.ceil(bat_now.perc)) .. "% ")
+            return
+        end
+        -- on AC power
+        baticon:set_image(beautiful.ac)
+        widget:set_markup(bat_now.time .. " ")
+    end
+})
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -227,15 +258,14 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
-            wibox.widget.separator({
-                orientation = "vertical",
-                forced_width = 30,
-                thickness = 0,
-            }),
+            separator,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            wibox.container.background(baticon),
+            bat,
+            separator,
             mpris_widget(),
             wibox.widget.systray(),
             mytextclock,
