@@ -56,7 +56,7 @@ Be aware that this will rewrite your current "default" theme.
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/24773698/195279541-49d15cca-bb9a-4d1b-ba7c-8a1e27f4c0a9.png)
+![image](https://user-images.githubusercontent.com/24773698/198975568-f60f871c-bae6-4774-9bb9-fac7d25b12aa.png)
 
 
 ## Overview
