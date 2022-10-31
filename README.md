@@ -12,7 +12,11 @@ Small theme for AwesomeWM, **heavily opinionated** and user* friendly.
 
 ## News :newspaper:
 
-- Fix spotify icon not appearing in Awesome tasklist.
+- Camel now has (almost) the same keybinds as Epitaph.
+- New battery widget.
+- New wallpaper.
+- New lockscreen background.
+- Added a CMUS widget.
 
 ## Credit / Sources
 
@@ -38,13 +42,13 @@ Be aware that this will rewrite your current "default" theme.
 
 ## OS Specific
 - Upower for `battery-widget`
-- dbus :nausea:
+- dbus
 
 ### rc.lua specific
-- Brave Browser for "browser"
-- Kitty for "terminal"
-- Caja for "filemanager"
-- Pluma for "gui_editor"
+- Brave Browser for `browser`
+- Kitty for `terminal`
+- Caja for `filemanager`
+- Pluma for `gui_editor`
 
 #### Startup programs
 - i3lock
