@@ -28,4 +28,4 @@ run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
 run volumeicon
 run picom --experimental-backends
-run xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
+run xss-lock --transfer-sleep-lock -- i3lock -i "$HOME"/.config/awesome/themes/lock.png --nofork
