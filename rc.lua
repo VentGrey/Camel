@@ -121,9 +121,11 @@ local bat = batwidget({
         if bat_now.status == "Discharging" then
             if bat_now.perc <= 15 then
                 baticon:set_image(beautiful.bat_empty)
-            elseif bat_now.perc >= 16 then
+            elseif bat_now.perc < 50 then
                 baticon:set_image(beautiful.bat_half)
-            elseif bat_now.perc == 100 then
+            elseif bat_now.perc > 51 then
+                baticon:set_image(beautiful.bat_full)
+            elseif bat_now.perc >= 99 then
                 baticon:set_image(beautiful.bat_charge)
             else
                 baticon:set_image(beautiful.bat_full)
