@@ -8,25 +8,23 @@ run() {
 }
 
 ## run (only once) processes which spawn with different name
+if (command -v gnome-keyring-daemon && ! pgrep gnome-keyring-d); then
+    gnome-keyring-daemon --components=pkcs11,secrets,ssh,gpg --daemonize --login &
+fi
+
 if (command -v start-pulseaudio-x11 && ! pgrep pulseaudio); then
     start-pulseaudio-x11 &
 fi
-if (command -v /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 && ! pgrep polkit-mate-aut) ; then
-    /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+if (command -v /usr/libexec/polkit-mate-authentication-agent-1 && ! pgrep polkit-mate-aut) ; then
+    /usr/libexec/polkit-mate-authentication-agent-1 &
 fi
 if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
     mate-power-manager &
 fi
 
 run dbus-update-activation-environment --all
-/usr/bin/gnome-keyring-daemon --start --components=pkcs11
-/usr/bin/gnome-keyring-daemon --start --components=secrets
-/usr/bin/gnome-keyring-daemon --start --components=ssh
-/usr/bin/gnome-keyring-daemon --start --components=gpg
-run start-pulseaudio-x11
 run /usr/libexec/mate-settings-daemon
 run nm-applet
-run mate-screensaver
 run xdg-user-dirs-update
 run xdg-user-dirs-gtk-update
 run volumeicon

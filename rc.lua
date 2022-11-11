@@ -134,8 +134,8 @@ local bat = batwidget({
             return
         end
         -- on AC power
-        baticon:set_image(beautiful.ac)
-        widget:set_markup(bat_now.time .. " ")
+        baticon:set_image(beautiful.bat_charge)
+        widget:set_markup(string.format("%3d", math.ceil(bat_now.perc)) .. "% ")
     end
 })
 
