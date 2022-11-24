@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## run (only once) processes which spawn with the same name
 run() {
@@ -7,9 +7,12 @@ run() {
    fi
 }
 
+# Activate dbus first
+run dbus-update-activation-environment --all --verbose
+
 ## run (only once) processes which spawn with different name
 if (command -v gnome-keyring-daemon && ! pgrep gnome-keyring-d); then
-    gnome-keyring-daemon --components=pkcs11,secrets,ssh,gpg --daemonize --login &
+    gnome-keyring-daemon --components=pkcs11,secrets,ssh,gpg --start --foreground &
 fi
 
 if (command -v start-pulseaudio-x11 && ! pgrep pulseaudio); then
@@ -22,7 +25,6 @@ if (command -v  mate-power-manager && ! pgrep mate-power-man) ; then
     mate-power-manager &
 fi
 
-run dbus-update-activation-environment --all
 run /usr/libexec/mate-settings-daemon
 run nm-applet
 run xdg-user-dirs-update
